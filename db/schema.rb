@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200427221653) do
+ActiveRecord::Schema.define(version: 20200502121613) do
 
 # Could not dump table "articles" because of following StandardError
 #   Unknown type 'start' for column 'description'
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
