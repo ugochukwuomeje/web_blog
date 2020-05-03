@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200502184458) do
+ActiveRecord::Schema.define(version: 20200503150602) do
 
 # Could not dump table "articles" because of following StandardError
 #   Unknown type 'start' for column 'description'
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20200502184458) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
