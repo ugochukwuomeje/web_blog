@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+# put the relationship between the article and model
+  has_many :articles
+#convert the email to lower case before saving
+  before_save {self.email = email.downcase}
   validates :username, presence: true,
             uniqueness: {case_sensitive:false},# making case_sensitive false ensures that both 
 #    apital and small letter as thesame so that you can enter thesame value irrespevtive their case
