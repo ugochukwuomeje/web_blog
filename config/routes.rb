@@ -5,4 +5,9 @@ Rails.application.routes.draw do
 
     resources :articles
 
+    #add the route so that when type /signup and not new it will display a new page
+    get '/signup', to: 'users#new'
+    #post 'users', to: 'users#create'
+    resources :users, except: [:new]
+    #alternatively you could do resources :users, except: [:new]
 end
