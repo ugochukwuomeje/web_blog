@@ -31,6 +31,10 @@ class UsersController < ApplicationController
      end
    end
 
+   def show
+      @user = User.find(params[:id])
+   end
+
     private
     def user_params
         #this creates a new user object with the parameters that were passed
