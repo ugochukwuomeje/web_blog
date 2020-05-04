@@ -10,6 +10,11 @@ end
 gem 'rails', '~> 5.1.7'
 # Use sqlite3 as the database for Active Record
 
+#adding gem for pagination
+gem 'will_paginate', '3.1.5'
+
+#adding boottrap paginate but you have to also add gem paginate as above
+gem 'bootstrap-will_paginate', '1.0.0'
 #add bcrypt for authentication
 gem 'bcrypt', '~> 3.1.7'
 # Use Puma as the app server
