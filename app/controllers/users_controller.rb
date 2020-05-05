@@ -18,8 +18,10 @@ class UsersController < ApplicationController
       # debugger
      @user = User.new(user_params)
      if @user.save
+        #after signing in st the session variable
+        session[:user_id] = @user.id
         flash[:success] = "welcome to the alpha blog #{@user.username}"
-        redirect_to articles_path
+        redirect_to user_path(@user)
      else
 
         render 'new'
